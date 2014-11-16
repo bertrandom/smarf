@@ -12,6 +12,7 @@
 
     setcookie('smarf', $smarf);
 
+    // iOS Devices can't autoplay videos =(
     $iDevice = false;
     if (stristr($_SERVER['HTTP_USER_AGENT'], 'iPad') !== FALSE || stristr($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== FALSE || stristr($_SERVER['HTTP_USER_AGENT'], 'iPod') !== FALSE) {
         $iDevice = true;
@@ -22,6 +23,9 @@
     <head>
         <meta charset="utf-8">
         <title>Too Many Smarfs</title>
+        <!--
+            https://github.com/bertrandom/smarf
+        -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/smarf.css" rel="stylesheet" type="text/css" media="all">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
